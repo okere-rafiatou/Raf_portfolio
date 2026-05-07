@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Twitter, X } from 'lucide-react';
 import { PERSONAL_INFO, ABOUT } from '../utils/constants';
+import rafImage from '../assets/images/raf.jpeg';
 
 const fullText = "Hi! I'm Rafiatou OKERE, a Computer Scientist and Data Enthusiast with a strong background in Mathematics. I love turning complex data into smart solutions that make a real impact. From Machine Learning to Blockchain, I build innovative tech that solves real-world problems.";
 const words = fullText.split(' ');
@@ -32,7 +33,7 @@ const Hero = ({ setActiveSection }) => {
             <div className="relative w-80 h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] rounded-full overflow-hidden bg-gradient-to-br from-gray-300 to-gray-400 shadow-2xl">
               {/* Image en noir et blanc */}
               <img 
-                src="/src/assets/images/raf.jpeg" 
+                src={rafImage} 
                 alt={PERSONAL_INFO.name}
                 className="w-full h-full object-cover grayscale"
               />
@@ -147,7 +148,7 @@ const Hero = ({ setActiveSection }) => {
               <div className="relative flex-shrink-0 w-36 h-36">
                 <div className="absolute inset-0 rounded-[60%_40%_55%_45%/50%_60%_40%_50%] bg-slate-400/40 dark:bg-slate-600/50 scale-110" />
                 <img
-                  src="/src/assets/images/raf.jpeg"
+                  src={rafImage}
                   alt={PERSONAL_INFO.name}
                   className="relative w-full h-full object-cover rounded-[60%_40%_55%_45%/50%_60%_40%_50%] grayscale"
                 />
