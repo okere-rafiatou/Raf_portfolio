@@ -41,12 +41,12 @@ const Contact = ({ setActiveSection }) => {
           <span className="font-medium">Back to home</span>
         </button>
 
-        <div className="grid md:grid-cols-2 gap-16 items-start">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-start">
           
           {/* Colonne gauche - Informations */}
           <div className="space-y-8">
             <div>
-              <h1 className="text-6xl md:text-7xl font-black text-slate-900 dark:text-white mb-4">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white mb-4">
                 Contact
               </h1>
               <p className="text-xl text-slate-600 dark:text-slate-400">
@@ -88,7 +88,7 @@ const Contact = ({ setActiveSection }) => {
             <div className="space-y-6">
               
               {/* Prénom et Nom */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="firstName" className="block text-sm font-medium text-slate-900 dark:text-white mb-2">
                     First Name
@@ -118,7 +118,7 @@ const Contact = ({ setActiveSection }) => {
               </div>
 
               {/* Email et Objet */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-slate-900 dark:text-white mb-2">
                     Email *

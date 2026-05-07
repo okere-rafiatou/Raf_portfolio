@@ -26,8 +26,8 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen transition-colors duration-300">
-      <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:bg-navy min-h-screen">
+    <div className="min-h-screen transition-colors duration-300 bg-gradient-to-br from-slate-50 to-slate-100 dark:bg-navy overflow-x-hidden">
+      <div className="min-h-screen overflow-x-hidden">
         
         {/* Navigation */}
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} setActiveSection={setActiveSection} />

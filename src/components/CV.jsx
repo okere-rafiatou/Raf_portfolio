@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { ArrowLeft, Download } from 'lucide-react';
+import rafImage from '../assets/images/raf.jpeg';
 
 const CV = ({ setActiveSection }) => {
   const cvRef = useRef(null);
@@ -34,8 +35,8 @@ const CV = ({ setActiveSection }) => {
         {/* CV Container */}
         <div ref={cvRef} className="bg-white dark:bg-navy-light rounded-2xl shadow-2xl overflow-hidden">
           {/* En-tête avec nom */}
-          <div className="bg-gradient-to-r from-blue-900 to-blue-700 dark:from-blue-950 dark:to-blue-800 text-white py-8 px-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-center mb-2">
+          <div className="bg-gradient-to-r from-blue-900 to-blue-700 dark:from-blue-950 dark:to-blue-800 text-white py-6 px-4 sm:py-8 sm:px-8">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-2">
               Miss OKERE Rafiatou
             </h1>
             <p className="text-center text-blue-100">
@@ -47,15 +48,15 @@ const CV = ({ setActiveSection }) => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-0">
-            
+
             {/* Colonne gauche - Sidebar */}
-            <div className="md:col-span-1 bg-gray-50 dark:bg-navy-light p-8 space-y-8">
-              
+            <div className="md:col-span-1 bg-gray-50 dark:bg-navy-light p-4 sm:p-8 space-y-6 sm:space-y-8">
+
               {/* Photo */}
-              <div className="flex justify-center mb-6">
-                <div className="w-48 h-48 rounded-lg overflow-hidden shadow-lg">
+              <div className="flex justify-center mb-4">
+                <div className="w-32 h-32 sm:w-48 sm:h-48 rounded-lg overflow-hidden shadow-lg">
                   <img
-                    src="/src/assets/images/raf.jpeg"
+                    src={rafImage}
                     alt="Rafiatou OKERE"
                     className="w-full h-full object-cover"
                   />
@@ -122,7 +123,7 @@ const CV = ({ setActiveSection }) => {
             </div>
 
             {/* Colonne droite - Contenu principal */}
-            <div className="md:col-span-2 p-8 space-y-6">
+            <div className="md:col-span-2 p-4 sm:p-8 space-y-6">
               
               {/* Education */}
               <div>

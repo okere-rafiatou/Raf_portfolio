@@ -24,16 +24,16 @@ const Hero = ({ setActiveSection }) => {
   }, []);
 
   return (
-    <section id="accueil" className="min-h-screen flex items-center justify-center px-4 py-20 bg-white dark:bg-navy">
+    <section id="accueil" className="min-h-screen flex items-center justify-center px-4 py-24 bg-white dark:bg-navy">
       <div className="max-w-7xl mx-auto w-full">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-16 md:gap-24">
-          
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 lg:gap-14 xl:gap-20">
+
           {/* Image à gauche */}
           <div className="flex-shrink-0 order-1 md:order-1">
-            <div className="relative w-80 h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] rounded-full overflow-hidden bg-gradient-to-br from-gray-300 to-gray-400 shadow-2xl">
+            <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-[420px] xl:h-[420px] rounded-full overflow-hidden bg-gradient-to-br from-gray-300 to-gray-400 shadow-2xl">
               {/* Image en noir et blanc */}
-              <img 
-                src={rafImage} 
+              <img
+                src={rafImage}
                 alt={PERSONAL_INFO.name}
                 className="w-full h-full object-cover grayscale"
               />
@@ -45,16 +45,16 @@ const Hero = ({ setActiveSection }) => {
           </div>
           
           {/* Texte à droite */}
-          <div className="flex-1 space-y-8 order-2 md:order-2 max-w-2xl">
+          <div className="flex-1 space-y-6 sm:space-y-8 order-2 md:order-2 max-w-2xl w-full text-center md:text-left">
             {/* Grand titre "Hello World" avec animation */}
             <div className="flex items-center gap-3 md:gap-4">
-              <h1 
-                className="text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white leading-none animate-slideInLeft"
+              <h1
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white leading-none animate-slideInLeft"
               >
                 Hello
               </h1>
-              <h1 
-                className="text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white leading-none animate-slideInRight"
+              <h1
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white leading-none animate-slideInRight"
                 style={{ animationDelay: '0.4s' }}
               >
                 World
@@ -89,31 +89,29 @@ const Hero = ({ setActiveSection }) => {
               </p>
             </div>
             
-            {/* Trois boutons ronds colorés avec animation de défilement */}
-            <div className="flex gap-6 pt-6 overflow-x-auto pb-4 scrollbar-hide">
-              <div className="flex gap-6 animate-scroll">
-                <button
-                  onClick={() => setActiveSection('cv')}
-                  className="w-36 h-36 md:w-44 md:h-44 flex-shrink-0 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-2xl md:text-3xl font-black text-black hover:scale-105 hover:shadow-2xl transition-all duration-300 shadow-lg cursor-pointer animate-fadeIn"
-                  style={{ animationDelay: '1.2s' }}
-                >
-                  CV
-                </button>
-                <button
-                  onClick={() => setActiveSection('projets')}
-                  className="w-36 h-36 md:w-44 md:h-44 flex-shrink-0 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center text-2xl md:text-3xl font-black text-black hover:scale-105 hover:shadow-2xl transition-all duration-300 shadow-lg cursor-pointer animate-fadeIn"
-                  style={{ animationDelay: '1.5s' }}
-                >
-                  Projects
-                </button>
-                <button
-                  onClick={() => setActiveSection('contact')}
-                  className="w-36 h-36 md:w-44 md:h-44 flex-shrink-0 rounded-full bg-gradient-to-br from-cyan-400 to-teal-500 flex items-center justify-center text-2xl md:text-3xl font-black text-black hover:scale-105 hover:shadow-2xl transition-all duration-300 shadow-lg cursor-pointer animate-fadeIn"
-                  style={{ animationDelay: '1.8s' }}
-                >
-                  Contact
-                </button>
-              </div>
+            {/* Trois boutons ronds colorés */}
+            <div className="flex gap-4 sm:gap-6 pt-4 sm:pt-6 overflow-x-auto pb-4 scrollbar-hide justify-center md:justify-start">
+              <button
+                onClick={() => setActiveSection('cv')}
+                className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 xl:w-40 xl:h-40 flex-shrink-0 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-lg sm:text-xl md:text-2xl xl:text-3xl font-black text-black hover:scale-105 hover:shadow-2xl transition-all duration-300 shadow-lg cursor-pointer animate-fadeIn"
+                style={{ animationDelay: '1.2s' }}
+              >
+                CV
+              </button>
+              <button
+                onClick={() => setActiveSection('projets')}
+                className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 xl:w-40 xl:h-40 flex-shrink-0 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center text-lg sm:text-xl md:text-2xl xl:text-3xl font-black text-black hover:scale-105 hover:shadow-2xl transition-all duration-300 shadow-lg cursor-pointer animate-fadeIn"
+                style={{ animationDelay: '1.5s' }}
+              >
+                Projects
+              </button>
+              <button
+                onClick={() => setActiveSection('contact')}
+                className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 xl:w-40 xl:h-40 flex-shrink-0 rounded-full bg-gradient-to-br from-cyan-400 to-teal-500 flex items-center justify-center text-lg sm:text-xl md:text-2xl xl:text-3xl font-black text-black hover:scale-105 hover:shadow-2xl transition-all duration-300 shadow-lg cursor-pointer animate-fadeIn"
+                style={{ animationDelay: '1.8s' }}
+              >
+                Contact
+              </button>
             </div>
           </div>
         </div>
