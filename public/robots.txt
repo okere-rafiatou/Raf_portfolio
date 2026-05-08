@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://okere-rafiatou.github.io/Raf_portfolio/sitemap.xml
