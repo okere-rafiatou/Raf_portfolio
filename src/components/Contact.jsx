@@ -3,9 +3,9 @@ import { ArrowLeft, CheckCircle, XCircle, Loader } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import { PERSONAL_INFO } from '../utils/constants';
 
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
+const EMAILJS_SERVICE_ID  = 'service_r9rx4zi';
+const EMAILJS_TEMPLATE_ID = 'template_zwsvhd2';
+const EMAILJS_PUBLIC_KEY  = 'czVt7DvVIIwEoOvRf';
 
 const validate = (data) => {
   const errors = {};
@@ -59,16 +59,26 @@ const Contact = ({ setActiveSection }) => {
     }
     setStatus('loading');
     try {
-      await emailjs.sendForm(
+      await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
-        formRef.current,
-        EMAILJS_PUBLIC_KEY
+        {
+          firstName: formData.firstName,
+          lastName:  formData.lastName,
+          name:      `${formData.firstName} ${formData.lastName}`,
+          email:     formData.email,
+          subject:   formData.subject,
+          message:   formData.message,
+        },
+        { publicKey: EMAILJS_PUBLIC_KEY }
       );
       setStatus('success');
       setFormData({ firstName: '', lastName: '', email: '', subject: '', message: '' });
       setErrors({});
-    } catch {
+    } catch (err) {
+      console.error('EmailJS error status:', err?.status);
+      console.error('EmailJS error text:', err?.text);
+      console.error('EmailJS error full:', JSON.stringify(err));
       setStatus('error');
     }
   };
